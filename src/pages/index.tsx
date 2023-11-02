@@ -13,9 +13,9 @@ export default function Home() {
       const response = await fetch("/api/")
       // eslint-disable-next-line
       const data = await response.json()
+      /* eslint-disable */
       setTasks(data.message)
     }
-    /* eslint-disable */
     getTasks();
   })
   const user = useUser();
