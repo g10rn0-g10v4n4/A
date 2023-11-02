@@ -3,7 +3,7 @@
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://5p63iqcz5v5c1ty8f1an:pscale_pw_SRzMTT9fE01YUAo78uaXgKD29tdCrUFPz7XMrc7RAFS@aws.connect.psdb.cloud/bingbong?sslaccept=strict"
+  url      = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
