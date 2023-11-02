@@ -19,7 +19,7 @@ export default function Home() {
     getTasks();
   })
   const user = useUser();
-  /* eslint-enable */
+      /* eslint-enable */
   const { data } = api.post.getAll.useQuery();
   return (
     <>
