@@ -10,9 +10,7 @@ export default function TaskList({tasks}: TaskListProps) {
     <>
         {tasks.map((task) => {
             <Task key={i++}/>
-            /* eslint-disable */
             return <h1>{task}</h1>
-            /* eslint-enable */
         })}
     </>
   )
