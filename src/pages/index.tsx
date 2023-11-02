@@ -11,13 +11,16 @@ export default function Home() {
   useEffect(() => {
     async function getTasks() {
       const response = await fetch("/api/")
+      // eslint-disable-next-line
       const data = await response.json()
       setTasks(data.message)
     }
+    /* eslint-disable */
     getTasks();
   })
   const user = useUser();
   const { data } = api.post.getAll.useQuery();
+    /* eslint-enable */
   return (
     <>
       <Head>

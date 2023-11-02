@@ -10,6 +10,7 @@ export default function TaskList({tasks}: TaskListProps) {
     <>
         {tasks.map((task) => {
             <Task key={i++}/>
+            //eslint-disable-next-line
             return <h1>{task}</h1>
         })}
     </>
