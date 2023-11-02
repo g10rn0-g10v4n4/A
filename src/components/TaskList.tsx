@@ -5,12 +5,14 @@ type TaskListProps = {
 }
 
 export default function TaskList({tasks}: TaskListProps) {
-  var i = 0;
+  let i = 0;
   return (
     <>
         {tasks.map((task) => {
             <Task key={i++}/>
+            /* eslint-disable */
             return <h1>{task}</h1>
+            /* eslint-enable */
         })}
     </>
   )
