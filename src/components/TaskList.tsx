@@ -1,17 +1,15 @@
 import Task from "./Task";
+import { type Task as task } from "@prisma/client";
 
 type TaskListProps = {
-    tasks: string[]
+  tasks: task[]
 }
 
 export default function TaskList({tasks}: TaskListProps) {
-  let i = 0;
   return (
     <>
-        {tasks.map((task) => {
-            <Task key={i++}/>
-            //eslint-disable-next-line
-            return <h1>{task}</h1>
+        {tasks?.map((task) => {
+            return <Task key={task.id} task={task}/>
         })}
     </>
   )

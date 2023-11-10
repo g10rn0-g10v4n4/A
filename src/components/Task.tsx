@@ -1,5 +1,12 @@
-export default function Task() {
+import { Task } from "@prisma/client";
+
+type TaskProps = {
+  task: Task
+}
+
+export default function Task({task}: TaskProps) {
   return (
-    <div>Task</div>
+    // Use daisyUI card to create task layout
+    <div>{task.name}</div>
   )
 }
