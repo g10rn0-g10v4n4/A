@@ -1,5 +1,9 @@
 import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
 
+function getData() {
+    let name = (document.getElementById("name") as HTMLInputElement).value;
+}
+
 export default function Navbar(){
     const user = useUser();
     return ( <div className="navbar bg-base-100">

@@ -6,6 +6,7 @@ import TaskList from "~/components/TaskList";
 import Head from "next/head";
 import Navbar from "~/components/Navbar";
 import { Task } from "@prisma/client";
+import Modal from "~/components/Modal";
 
 export default function Home() {
   const [tasks, setTasks] = useState([]);
@@ -13,15 +14,15 @@ export default function Home() {
   useEffect(() => {
     async function getTasks() {
       const response = await fetch("/api/")
-      // eslint-disable-next-line
-      const data = await response.json()
       /* eslint-disable */
+      const data = await response.json()
       setTasks(data.message)
     }
     getTasks();
   })
   const user = useUser();
   const { data } = api.post.getAll.useQuery();
+  //api.post.create.useQuery({name: "Test", desc: "Test"});
     /* eslint-enable */
   return (
     <>
@@ -35,11 +36,7 @@ export default function Home() {
         <div className="flex flex-col">
           <TaskList tasks={data as Task[]}/>
         </div>
-        <div className="fixed right-5 bottom-5">
-          <button className="btn btn-primary rounded-full btn-lg">
-            Add Task
-          </button>
-        </div>
+        <Modal/>
       </main>
     </>
   );

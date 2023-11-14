@@ -9,7 +9,7 @@ export const postRouter = createTRPCRouter({
       name: z.string().min(1),
       desc: z.string().min(1)
     }))
-    .mutation(async ({ ctx, input }) => {
+    .query(async ({ ctx, input }) => {
       // simulate a slow db call
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
