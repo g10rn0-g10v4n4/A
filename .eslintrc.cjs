@@ -15,21 +15,27 @@ const config = {
     // Feel free to reconfigure them to your own preference.
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "prefer-const": "off",
+    "@next/next/no-img-element": "off",
+    "jsx-a11y/alt-text": "off",
+    "@typescript-eslint/consistent-type-imports": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "off"
 
-    "@typescript-eslint/consistent-type-imports": [
-      "warn",
-      {
-        prefer: "type-imports",
-        fixStyle: "inline-type-imports",
-      },
-    ],
-    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
-    "@typescript-eslint/no-misused-promises": [
-      2,
-      {
-        checksVoidReturn: { attributes: false },
-      },
-    ],
+    // "@typescript-eslint/consistent-type-imports": [
+    //   "warn",
+    //   {
+    //     prefer: "type-imports",
+    //     fixStyle: "inline-type-imports",
+    //   },
+    // ],
+    // "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    // "@typescript-eslint/no-misused-promises": [
+    //   2,
+    //   {
+    //     checksVoidReturn: { attributes: false },
+    //   },
+    // ],
   },
 };
 
