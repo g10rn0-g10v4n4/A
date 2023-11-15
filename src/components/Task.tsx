@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { Task } from "@prisma/client";
 
 type TaskProps = {

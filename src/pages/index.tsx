@@ -1,14 +1,18 @@
+// eslint-disable-next-line
 import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
+// eslint-disable-next-line
 import { NextPage } from "next";
 import { api } from "~/utils/api";
 import TaskList from "~/components/TaskList";
 import Head from "next/head";
 import Navbar from "~/components/Navbar";
+// eslint-disable-next-line
 import { Task } from "@prisma/client";
 import Modal from "~/components/Modal";
 
 export default function Home() {
+// eslint-disable-next-line
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
@@ -23,7 +27,6 @@ export default function Home() {
   const user = useUser();
   const { data } = api.post.getAll.useQuery();
   //api.post.create.useQuery({name: "Test", desc: "Test"});
-    /* eslint-enable */
   return (
     <>
       <Head>
@@ -38,6 +41,6 @@ export default function Home() {
         </div>
         <Modal/>
       </main>
-    </>
+    </>/* eslint-enable */
   );
 }

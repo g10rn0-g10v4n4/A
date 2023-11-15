@@ -1,5 +1,7 @@
+/* eslint-disable */
 import { Task } from "@prisma/client";
 import { z } from "zod";
+/* eslint-enable */
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 

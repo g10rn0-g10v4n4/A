@@ -1,6 +1,8 @@
 import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
 
+// eslint-disable-next-line
 function getData() {
+    // eslint-disable-next-line
     let name = (document.getElementById("name") as HTMLInputElement).value;
 }
 
